@@ -1,0 +1,431 @@
+@import url(normalize.css);
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* use this class for block that has child floated elements */
+.ba-clearfix:before,
+.ba-clearfix:after {
+  content: '';
+  display: table;
+}
+
+.ba-clearfix:after {
+  clear: both;
+}
+
+/* hack for IE 6/7 */
+.ba-clearfix {
+  *zoom: 1;
+}
+
+/* classes for text */
+.ba-text-center {
+  text-align: center;
+}
+
+.ba-text-left {
+  text-align: left;
+}
+
+.ba-text-right {
+  text-align: right;
+}
+
+.ba-text-justify {
+  text-align: justify;
+}
+
+/* layout classes */
+.ba-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.ba-float-left {
+  float: left;
+}
+
+.ba-float-right {
+  float: right;
+}
+
+/* ba grid defination */
+/* use this class for block that has child floated elements */
+.ba-grid:before,
+.ba-grid:after {
+  content: '';
+  display: table;
+}
+
+.ba-grid:after {
+  clear: both;
+}
+
+/* hack for IE 6/7 */
+.ba-grid {
+  *zoom: 1;
+}
+
+.ba-grid {
+  margin: 0 -15px;
+}
+
+.ba-grid + .ba-grid {
+  margin-top: 30px;
+}
+
+.ba-grid > [class*="ba-column-"] {
+  padding: 0 15px;
+}
+
+[class*="ba-column-"] {
+  float: left;
+}
+
+.ba-column-12 {
+  width: 100%;
+}
+
+.ba-column-11 {
+  width: 91.667%;
+}
+
+.ba-column-10 {
+  width: 83.334%;
+}
+
+.ba-column-9 {
+  width: 75%;
+}
+
+.ba-column-8 {
+  width: 66.667%;
+}
+
+.ba-column-7 {
+  width: 58.33333333%;
+}
+
+.ba-column-6 {
+  width: 50%;
+}
+
+.ba-column-5 {
+  width: 41.6666667%;
+}
+
+.ba-column-4 {
+  width: 33.334%;
+}
+
+.ba-column-3 {
+  width: 25%;
+}
+
+.ba-column-2 {
+  width: 16.667%;
+}
+
+.ba-column-1 {
+  width: 8.334%;
+}
+
+body {
+  padding: 110px 0 0 90px;
+  color: #333;
+}
+
+.ba-header {
+  padding-bottom: 35px;
+}
+
+.ba-sub-title,
+.ba-title {
+  margin: 0;
+}
+
+.ba-sub-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #898f8f;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.ba-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: #ffcc00;
+  text-transform: uppercase;
+  font-size: 60px;
+  padding-top: 20px;
+}
+
+.ba-divider {
+  width: 35px;
+  height: 19px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.ba-divider:before, .ba-divider:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 1px;
+  background-color: #ffcc00;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ba-divider:before {
+  right: 100%;
+}
+
+.ba-divider:after {
+  left: 100%;
+}
+
+.ba-slider {
+  margin-top: 40px;
+  position: relative;
+}
+
+.ba-slider .ba-slider__arrow {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  font-size: 40px;
+  cursor: pointer;
+  transition: all .2s ease-in;
+  color: #ffcc00;
+}
+
+.ba-slider .ba-slider__arrow:hover {
+  color: #ffeb99;
+}
+
+.ba-slider .ba-slider__arrow--left {
+  left: 0;
+  top: 48%;
+  transform: translateY(-50%);
+}
+
+.ba-slider .ba-slider__arrow--right {
+  right: 0;
+  top: 48%;
+  transform: translateY(-50%);
+}
+
+.ba-slider__indicators {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ba-slider .ba-column-6 {
+  padding: 75px;
+}
+
+.ba-slider .ba-column-6:first-child {
+  border-right: 1px solid #ffcc00;
+}
+
+.ba-slider__image {
+  padding: 15px;
+  position: relative;
+}
+
+.ba-slider__image .ba-corner {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-width: 1px;
+  border-color: #ffcc00;
+}
+
+.ba-slider__image .ba-corner--tl {
+  top: 0;
+  left: 0;
+  border-left-style: solid;
+  border-top-style: solid;
+}
+
+.ba-slider__image .ba-corner--tr {
+  top: 0;
+  right: 0;
+  border-right-style: solid;
+  border-top-style: solid;
+}
+
+.ba-slider__image .ba-corner--br {
+  bottom: 0;
+  right: 0;
+  border-bottom-style: solid;
+  border-right-style: solid;
+}
+
+.ba-slider__image .ba-corner--bl {
+  bottom: 0;
+  left: 0;
+  border-bottom-style: solid;
+  border-left-style: solid;
+}
+
+.ba-slider__image img {
+  border: 1px solid #ffcc00;
+  width: 100%;
+}
+
+.ba-team__name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  color: #666;
+  letter-spacing: .02em;
+  position: relative;
+  padding-bottom: 35px;
+  margin-bottom: 33px;
+}
+
+.ba-team__name:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background-color: #ffcc00;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.ba-team__position {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-weight: 400;
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 29px;
+}
+
+.ba-team__description .ba-socials {
+  list-style-type: none;
+  font-size: 0;
+  padding-left: 0;
+  margin-bottom: 22px;
+}
+
+.ba-team__description .ba-socials__item {
+  display: inline-block;
+}
+
+.ba-team__description .ba-socials__item .fa {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 27px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  transition: all .2s ease-in;
+}
+
+.ba-team__description .ba-socials__item .fa:hover {
+  color: #666;
+  border: 2px solid #666;
+}
+
+.ba-team__description .ba-socials__item:not(:first-child) {
+  margin-left: 5px;
+}
+
+.ba-team__beography {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+  line-height: 24px;
+  margin-bottom: 23px;
+}
+
+.ba-team .ba-separator {
+  width: 20px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin: 0 auto;
+  margin-bottom: 36px;
+  position: relative;
+}
+
+.ba-team .ba-separator:before, .ba-team .ba-separator:after {
+  content: "";
+  width: 10px;
+  height: 4px;
+  background-color: #ffcc00;
+  position: absolute;
+}
+
+.ba-team .ba-separator:before {
+  left: -15px;
+}
+
+.ba-team .ba-separator:after {
+  right: -15px;
+}
+
+.ba-team__link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+  padding: 7px 12px;
+  border: 1px solid #ffcc00;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .2s ease-in;
+}
+
+.ba-team__link:hover {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
+.ba-indicators {
+  padding-left: 0;
+  font-size: 0;
+}
+
+.ba-indicators__item {
+  display: inline-block;
+}
+
+.ba-indicators__item:not(:first-child) {
+  margin-left: 9px;
+}
+
+.ba-indicators__button {
+  background-color: #ffcc00;
+  border: 1px solid #ffcc00;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s ease-in;
+}
+
+.ba-indicators__button:hover {
+  opacity: .5;
+}
+
+.ba-indicators__button--active {
+  background-color: transparent;
+}
